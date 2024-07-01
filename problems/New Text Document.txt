@@ -1,0 +1,6 @@
+1. 26 file reverse a doubly linked list
+2. 33 remove duplicates from unshorted list
+3. 35 add two no's in the linked list
+4. 40 short using merge short
+5. 41 Flatter linked list
+6. 42 copy list with random pointer
