@@ -14,8 +14,8 @@ class sumit
     //     z=_z;
     // }
 
-    //but by using initalization list we reassign it
-    sumit(int _x,int _y,int _z):x(_x),y(new int(_y)),z(_z){}//we also write in these prianthesis
+    //but by using initialization list we reassign it
+    sumit(int _x,int _y,int _z):x(_x),y(new int(_y)),z(_z){}//we also write in these parenthesis
     
     void set(int _x)
     {

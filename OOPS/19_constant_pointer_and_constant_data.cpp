@@ -6,7 +6,7 @@ int main()
     //if we write * after int and before const then we get const pointer and const data
     const int *const a=new int(2);
     cout<<*a<<endl;
-    //here we cant change data
+    //here we can't change data
     //*a=20;
     //here we change the pointer also 
     //int b=20;

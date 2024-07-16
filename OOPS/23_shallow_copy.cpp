@@ -34,14 +34,15 @@ int main()
     b.print();
 
     //change value of y of b object
+    b.x=6;
     *b.y=20;
     cout<<"print all values"<<endl;
     b.print();
 
-    //but when we print all values of a obj then its value also change thant is falut here of shallow copy
+    //but when we print all values of a obj the copy that we make in heap its value also change that is fault here of shallow copy
     a.print();
-    //when we use shallow copy it copy the value not make another variable 
-    //this also make problem when we delete the pointer of one obj that you make in heap then it also delete other copyed obj
+    //when we use shallow copy it copy the value not make another variable or we say it make reference not new copy 
+    //this also make problem when we delete the pointer of one obj that you make in heap then it also delete other copied obj
     //delete a;
     return 0;
 }

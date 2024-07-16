@@ -33,12 +33,13 @@ int main()
     cout<<"print all values"<<endl;
     b.print();
 
+    b.x=6;
     //change value of y of b object
     *b.y=20;
     cout<<"print all values"<<endl;
     b.print();
 
-    //but when we print all values of a obj then its value cant change because we use deep copy
+    //but when we print all values of a obj then its value can't change because we use deep copy
     a.print();
     return 0;
 }

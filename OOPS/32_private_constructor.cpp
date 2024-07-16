@@ -1,10 +1,10 @@
 #include<iostream>
 using namespace std;
-class ctorprivate
+class privConstructor
 {
     int a;
-    //yes we can make constructor as private
-    ctorprivate(int _val):a(_val){};
+    // yes we can make constructor as private
+    privConstructor(int _val):a(_val){};
     public:
     int b,c;
     void setval(int _val)
@@ -17,26 +17,25 @@ class ctorprivate
     }
     friend class B;
 };
-//this is used to insilized the value of constructor with another class that are the friend of A
+// this is used to initalized the value of constructor with another class that are the friend of A
 class B
 {
     public:
-    //here we insilize our class A constructor
-    ctorprivate setctor()
+    // here we initialize our class A constructor
+    privConstructor setctor()
     {
-        return ctorprivate(10);
+        return privConstructor(10);
     }
 };
 int main()
 {
-    //so here we cant assign value in the constructor with main function
-    //ctorprivate x(5);
+    // so here we can't assign value in the constructor with main function
+    // privConstructor x(5);
 
     B c;
-    ctorprivate x=c.setctor();
-    //now our constructor is insilized so we perform task by using the obj x
+    privConstructor x=c.setctor();
+    // now our constructor is initialized so we perform task by using the obj x
     cout<<"firstly our value of a is "<<x.getval()<<endl;
     x.setval(20);
     cout<<"after set the value of a is "<<x.getval();
-    //y.getval();
 }

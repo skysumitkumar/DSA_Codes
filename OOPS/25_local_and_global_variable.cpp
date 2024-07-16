@@ -6,9 +6,9 @@ int main()
     
     int x=2;
     x=3;
-    cout<<"print local varible value"<<x<<endl;
+    cout<<"print local variable value"<<x<<endl;
     cout<<"global variable value "<<::x<<endl;
-    //change value of global variable variable here 
+    //change value of global variable here 
     ::x=10;
     cout<<"print new global variable "<<::x<<endl;
 }

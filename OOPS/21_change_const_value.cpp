@@ -35,10 +35,10 @@ class abc
         *y=val;
     }
 };
-//this function only print thoes function thoes are const
-void printABC(const abc &a)//here we cant change any member variable
+//this function only print those function those are const
+void printABC(const abc &a)//here we can't change any member variable
 {
-    //here remember that here you call only thoes function that are already const
+    //here remember that here you call only those function that are already const
     cout<<a.getx()<<" "<<a.gety()<<endl;
 }
 int main()

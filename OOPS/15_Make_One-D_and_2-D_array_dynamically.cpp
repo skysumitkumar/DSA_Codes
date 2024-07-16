@@ -9,7 +9,7 @@ class array
     int **arr2d;
     int row;
     int col;
-    //constructor to set rows rows and columns
+    //constructor to set rows and columns
     array(int row,int col)
     {
         this->row=row;
@@ -63,7 +63,7 @@ class array
     }
     ~array()
     {
-        //dealocate array
+        //deallocate array
         delete[]arr1d;
         for(int i=0;i<row;i++)
         {

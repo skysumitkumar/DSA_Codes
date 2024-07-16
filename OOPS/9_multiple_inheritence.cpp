@@ -14,17 +14,17 @@ class Animal_India
 };
 class NewAnimal:public Animal
 {
-    //here all Animal public member are inherited as publically
+    //here all Animal public member are inherited as publicly
 };
 // class NewAnimal:private Animal
 // {
-//     //here all Animal public member are inherited as privated so we cant access these in out of the class 
+//     //here all Animal public member are inherited as private so we can't access these in out of the class 
       //if we want to access these we have to make getter and setter
 // };
 // class NewAnimal:protected Animal
 // {
 //     //here all Animal public member are inherited as protected
-//     //so we cant access them out of the class if we want to access them so we want getter and setter
+//     //so we can't access them out of the class if we want to access them so we want getter and setter
 // };
 class dog:private NewAnimal,private Animal_India
 {

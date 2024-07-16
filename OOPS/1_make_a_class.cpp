@@ -6,10 +6,10 @@ class dog
 };
 class Animal
 {
-    //By defalult it is in private we cant access it outside the class
+    //By default it is in private we can't access it outside the class
     int weight;
     public:
-    //public members are accaceble outside the class
+    //public members are accessible outside the class
     int size;
     string color;
 

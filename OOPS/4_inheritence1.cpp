@@ -8,7 +8,7 @@ class father
     int height;
     string color;
     string mood;
-    //this is default constructor for father class if cant make it and inherit this class to another class it show error to no default constructor for father class
+    //this is default constructor for father class if we cant make it and inherit this class to another class it show error to no default constructor for father class
     father()
     {
 
@@ -38,8 +38,8 @@ class son:public father
     string name;
     string gf_name;
     //constructor
-    //yha hame father ke constructor ki value bhi dani padegi tabhi father ki values son get kar paaega
-    son(string name,string gf_name,int height,string color,int age,string mood): father(height,color,age,mood)//insilize father constructor
+    //yha hame father ke constructor ki value bhi deni padegi tabhi father ki values son get kar paaega
+    son(string name,string gf_name,int height,string color,int age,string mood): father(height,color,age,mood)//initialize father constructor
     {
         this->name=name;
         this->gf_name=gf_name;
@@ -55,6 +55,6 @@ class son:public father
 };
 int main()
 {
-    son a("amit","muskan",55,"brown",56,"hel");
+    son a("amit","muskan",55,"brown",20,"romantic");
     a.gheight();
 }

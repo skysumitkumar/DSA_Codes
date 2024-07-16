@@ -7,11 +7,12 @@ class xyz
     public:
     //here we make static variables 
     static int x,y;
-    // xyz()x(1),y(2){}
+    // xyz():x(1),y(2){}
     void print()
     {
-        //cout<<this->x<<" "<<this->y<<endl;
-        cout<<x<<" "<<y<<endl;
+        cout<<this->x<<" "<<this->y<<endl;
+        // it also work
+        // cout<<x<<" "<<y<<endl;
     }
 };
 //yha hamne bataya h ki x jo h vo xyz class ka h or y jo h vo bhi xyz class ka h
@@ -31,6 +32,6 @@ int main()
     b.y=20;
     //print value of obj b
     //but when again we print the value of a it will change because in obj b we change the static variable value 
-    //thes share memory with all the class instance
+    //these share memory with all the class instance
     a.print();
 }
