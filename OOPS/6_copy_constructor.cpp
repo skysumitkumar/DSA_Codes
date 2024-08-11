@@ -48,12 +48,13 @@ class Animal
 };
 int main()
 {
-    // //here we make copy constructor using statically
+    // //here parametrize constructor is called
     // Animal a(50,40,"brown");
     // // here default constructor is called
     // // Animal b;
     // // here assignment operator is called to assign a to b this is know as copy assignment
     // // b=a;
+    // // here we call copy constructor
     // //here b is this obj and a is obj that we pass here 
     // Animal b=a;
     // Animal c(b);
@@ -62,7 +63,7 @@ int main()
     // //it change the value of color index
     // b.color[1]='q';
     // cout<<b.color<<endl;
-    // //but it cant change it here
+    // //but it can't change it here
     // cout<<c.color<<endl;
 
     // //here we make copy constructor using dynamically(this is the right way to copy constructor dynamically)
