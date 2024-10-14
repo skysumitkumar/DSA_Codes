@@ -42,14 +42,14 @@ class cat:public Animal
 int main()
 {   
     // //upstreaming
-    // //firstly we use cat class and cat obj
-    // cat * c=new cat;
+    // //firstly we use cat class reference and cat class obj
+    // cat *c=new cat;
     // c->Animal::color="black";
     // c->cat::color="brown";
     // c->printcolor();
     
     // //upstreaming
-    // //here we use Animal class and Animal obj
+    // //here we use Animal class reference and Animal class obj
     // Animal * c=new Animal;
     // c->color="black";
     // //here we can't assign in the cat class because animal class not inherit cat class
@@ -57,7 +57,7 @@ int main()
     // c->printcolor();
 
     // // upstreaming
-    // //here we use Animal class and cat obj we firstly create cat object and then assigns it to an Animal pointer
+    // //here we use Animal class reference and cat class obj we firstly create cat object and then assigns it to an Animal pointer(reference)
     // Animal * c=new cat;
     // c->color="black";
     // //when we are assigning value to cat class it give error because here we make Animal class obj and Animal class not inherited cat class
@@ -67,13 +67,14 @@ int main()
     // //c->printcolor();
 
     //downstreaming
-    //here we use cat class and Animal class as object
+    //here we use cat class reference and Animal class object
     //it give error when we use previous method for downstreaming
-    //cat * c=new Animal;
+    //cat *c=new Animal;
     //for downstreaming we use this
     // This line uses a C-style cast to forcefully convert an Animal pointer to a Cat pointer. This is 
-    // extremely unsafe because it does not check whether the object being pointed to is actually of the derived type Cat. This can lead to undefined behavior when trying to access or modify members specific to Cat.
-    //cat* c=(cat*) new Animal;
+    // extremely unsafe because it does not check whether the object being pointed to is actually of the derived type Cat. This can lead 
+    // to undefined behavior when trying to access or modify members specific to Cat.
+    // cat* c=(cat*) new Animal;
     // to do it correctly we use upcast then downcast
     // Why Use a?: a is a pointer to Animal, but it actually points to a Cat object. By using dynamic_cast<cat*>(a), you are checking 
     //             at runtime if a indeed points to an object of type cat. If it does, c will be a valid pointer to cat; otherwise, c will be nullptr.
