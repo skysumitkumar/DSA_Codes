@@ -28,7 +28,7 @@ class Animal
     //default destructor
     //it automatically call in case of static obj after the execution
     //but in case of dynamic we have to call it
-    //And remember when you use many classes than you have to use the virtual to the parent constructor so our child class constructor also called
+    //And remember when you use many classes than you have to use the virtual to the parent constructor so our child class destructor also called
     ~Animal()
     {
         cout<<"I am inside the destructor"<<endl;
