@@ -34,7 +34,7 @@ class ClassA
     }
 };
 
-//here we define our static variable ans allocate memory to it
+//here we define our static variable and allocate memory to it
 //yha hamne bataya h ki staticVariable jo h vo ClassA class ka h or staticVariable1 jo h vo bhi ClassA class ka h
 int ClassA::staticVariable;
 int ClassA::staticVariable1=10;
@@ -67,3 +67,131 @@ int main()
     //these share memory with all the class instance
     a.print();
 }
+#include<iostream>
+using namespace std;
+class Counter 
+{
+public:
+    static int count; // Static member variable
+
+    Counter() 
+    {
+        count++;
+    }
+};
+// Initialize the static member variable
+int Counter::count=0;
+
+int main() 
+{
+    Counter c1;
+    Counter c2;
+    Counter c3;
+
+    cout<<"Number of Counter instances: "<<Counter::count<<endl; // Output: 3
+    return 0;
+}
+#include<iostream>
+using namespace std;
+class Math 
+{
+public:
+    static int add(int a, int b) 
+    { // Static member function
+        return a+b;
+    }
+};
+
+int main() 
+{
+    int sum=Math::add(5,3); // Calling static function
+    cout<<"Sum: "<<sum<<endl; // Output: 8
+    return 0;
+}
+#include<iostream>
+using namespace std;
+class Sample 
+{
+public:
+    void staticFunction() 
+    {
+        static int count=0; // Static variable
+        count++;
+        cout<<"Function called "<<count<<" times."<<endl;
+    }
+};
+
+int main() 
+{
+    Sample s;
+    s.staticFunction(); // Output: Function called 1 times.
+    s.staticFunction(); // Output: Function called 2 times.
+    s.staticFunction(); // Output: Function called 3 times.
+    return 0;
+}
+#include<iostream>
+using namespace std;
+class Calculator 
+{
+public:
+    static int multiply(int a,int b) 
+    {
+        return a*b;
+    }
+};
+
+int main() 
+{
+    int product=Calculator::multiply(4,5); // Calling static function
+    cout<<"Product: "<<product<<endl; // Output: 20
+    return 0;
+}
+#include<iostream>
+using namespace std;
+class BankAccount 
+{
+private:
+    static double interestRate; // Static member variable
+public:
+    static void setInterestRate(double rate) 
+    {
+        interestRate=rate; // Set static variable
+    }
+    static double calculateInterest(double amount) 
+    {
+        return amount*interestRate; // Use static variable
+    }
+};
+
+// Initialize static member variable
+double BankAccount::interestRate=0.05;
+
+int main() 
+{
+    BankAccount::setInterestRate(0.07); // Set interest rate
+    double interest=BankAccount::calculateInterest(1000); // Calculate interest
+    cout<<"Interest: $"<<interest<<endl; // Output: Interest: $70
+    return 0;
+}
+#include<iostream>
+using namespace std;
+struct Library 
+{
+    static int totalBooks; // Static member variable
+
+    static void addBooks(int count) 
+{
+        totalBooks+=count; // Add to static variable
+    }
+};
+// Initialize static member variable
+int Library::totalBooks=0;
+
+int main() 
+{
+    Library::addBooks(10);
+    Library::addBooks(5);
+    cout<<"Total Books in Library: "<<Library::totalBooks<<endl; // Output: 15
+    return 0;
+}
+
