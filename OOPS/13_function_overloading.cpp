@@ -11,7 +11,7 @@ class Human
         this->size=size;
         return size;
     }
-    //we use different parameter to do function overloading
+    //we use different parameter to do function overloading when we give same name and same parameter in both functions and give diff return type it give error
     int print(int size,int length)
     {
         this->size=size;
