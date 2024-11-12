@@ -11,7 +11,7 @@ class Animal
     public:
     //public members are accessible outside the class
     int size;
-    string color;
+    string color;     //sizeof this is 32
 
 };
 int main()
@@ -20,6 +20,7 @@ int main()
     Animal a;
     //this is the private member we cant access it outside the class
     //cout<<a.weight<<endl;
+    cout<<sizeof("")<<endl; //1
     cout<<a.size<<endl;
     dog b;
     cout<<sizeof(dog);
