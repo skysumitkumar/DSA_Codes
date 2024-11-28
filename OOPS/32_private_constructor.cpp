@@ -22,9 +22,9 @@ class B
 {
     public:
     // here we initialize our class A constructor
-    privConstructor setctor()
+    privConstructor setctor(int val)
     {
-        return privConstructor(10);
+        return privConstructor(val);
     }
 };
 int main()
@@ -33,7 +33,7 @@ int main()
     // privConstructor x(5);
 
     B c;
-    privConstructor x=c.setctor();
+    privConstructor x=c.setctor(10);
     // now our constructor is initialized so we perform task by using the obj x
     cout<<"firstly our value of a is "<<x.getval()<<endl;
     x.setval(20);
